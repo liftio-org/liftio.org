@@ -12,8 +12,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
 
     <style>
-        * {
+        body {
+            background-color: #222;
+        }
+
+        p,
+        td,
+        a,
+        .subtitle,
+        .title {
             font-family: 'Nanum Gothic Coding', monospace;
+            color: aliceblue;
+        }
+
+        .table {
+            background-color: #222;
         }
 
         .liftio {
@@ -22,7 +35,7 @@
         }
 
         .year {
-            width: 100px;
+            width: 120px;
         }
 
         .time {
@@ -35,19 +48,23 @@
     <div class="container">
         <section class="hero is-medium">
             <div class="hero-body">
-                <div class="container has-text-centered">
-                    <p class="content">
+                <div class="container">
+                    <p class="content has-text-centered">
                         <img class="liftio" src="images/liftio-logo.png" alt="liftIO">
                         <img class="year" src="images/2021.png" alt="liftIO">
                     </p>
-                    <p class="subtitle has-text-weight-bold">Functional Programming at Work</p>
-                    <p class="subtitle has-text-weight-bold">10월 30일 (토) 13:50 ~ 18:00</time>
+                    <div class="content has-text-centered">
+                        <p class="subtitle has-text-weight-bold">Functional Programming at Work</p>
+                        <p class="subtitle has-text-weight-bold">10월 30일 (토) 13:50 ~ 18:00</time>
+                    </div>
                     <div class="content">
                         <p>liftIO 2021은 함수형 프로그래밍을 좋아하는 사람들이 모여 만든 컨퍼런스입니다.</p>
                         <p>이번 컨퍼런스의 슬로건인 Functional Programming at Work는 함수형 프로그래밍을 업무에 쓰면서 얻은 지식을 공유하기 위해 정했습니다.</p>
                         <p>함수형 프로그래밍을 좋아하는 사람들이 함께 모여 지식과 즐거움을 나누는 자리가 되기를 바랍니다.</p>
                     </div>
-                    <button class="button is-medium">참가 신청하기</button>
+                    <div class="container has-text-centered">
+                        <button class="button is-medium ">참가 신청하기</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -125,7 +142,7 @@
 
                 <div class="section">
                     <div class="content">
-                        <p class="title">REPL, 클로저의 수퍼 파워</p>
+                        <p class="title">1. REPL, 클로저의 수퍼 파워</p>
                         <div class="content">
                             <p>함수형 프로그래밍 언어인 클로저가 바꿔놓은 개발 경험에 대해 이야기합니다.</p>
                             <p>불변 자료구조의 단단한 토대 위에서 동작하는 REPL은, 다른 언어에서 경험할 수 없는 동적이고 Responsive한 개발 환경을 제공합니다.</p>
@@ -150,12 +167,12 @@
 
                 <div class="section">
                     <div class="content">
-                        <p class="title">연속된 우연으로 꾸려진 개발팀의 함수형 Scala 활용기</p>
+                        <p class="title">2. 연속된 우연으로 꾸려진 개발팀의 함수형 Scala 활용기</p>
                         <div class="content">
                             <p>때마침 맡게 된 신규 프로젝트에 Scala로 함수형 프로그래밍을 도입해서 서비스 론칭한 이야기를 풀어봅니다.</p>
                             <p>스칼라 환경에서 cats, http4s, doobie, circe 같은 함수형 라이브러리를 활용해 프로덕션 서비스를 가꾸어 나가며 배운 내용과 감상도
                                 공유합니다.</p>
-                            <p></p>더불어, 여러분에 프로젝트에 당장 쉽게 도입해 볼 만한 함수형 프로그래밍 기법들을 감히 나열해 보겠습니다.</p>
+                            <p>더불어, 여러분에 프로젝트에 당장 쉽게 도입해 볼 만한 함수형 프로그래밍 기법들을 감히 나열해 보겠습니다.</p>
                         </div>
                         <div class="media">
                             <figure class="image is-128x128">
@@ -178,7 +195,7 @@
 
                 <div class="section">
                     <div class="content">
-                        <p class="title">하스켈로 타입 안전한 GraphQL과 gRPC 서버 만들기</p>
+                        <p class="title">3. 하스켈로 타입 안전한 GraphQL과 gRPC 서버 만들기</p>
                         <div class="content">
                             <p>Haskell GraphQL/gRPC 라이브러리인 mu-haskell로 GraphQL과 gRPC 서버 구현하는 방법을 소개합니다.</p>
                             <p>mu-haskell에서 타입 안정성을 확보하기 위해 Haskell type-level 프로그래밍을 어떻게 사용했는지 설명하고</p>
@@ -206,7 +223,7 @@
 
                 <div class="section">
                     <div class="content">
-                        <p class="title">함수형 도메인 주도 설계 구현</p>
+                        <p class="title">4. 함수형 도메인 주도 설계 구현</p>
                         <div class="content">
                             <p>스칼라의 함수형 + 객체지향 패러다임은 도메인 주도 설계의 전술적 패턴들과 잘 어울립니다.</p>
                             <p>ZIO가 제공하는 순수 함수형 이펙트 시스템과 함께 모듈간 의존성 주입, 오류 처리, 설정 관리 등 실용적 구현 사례를 살펴봅니다.</p>
